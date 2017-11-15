@@ -11,7 +11,7 @@ our @All = qw(
     エスパー ドラゴン あく フェアリー
 );
 
-enum 'Type' => @All;
+enum 'Type' => \@All;
 has types => ( is => 'rw', default => 'ノーマル', isa => 'Type' );
 
 no Moose::Role;

@@ -64,24 +64,24 @@ sub disadvantage {
     return @{ $data->{effective} || [] };
 }
 
-sub recommend {
+sub recommended {
     my $self = shift;
-    my @recommend = ();
+    my @recommended = ();
     foreach my $type1 ( $self->effective() ){
         foreach my $type2 ( $self->advantage() ){
-            push @recommend, $type1 if $type1 && $type2 and $type1 eq $type2;
+            push @recommended, $type1 if $type1 && $type2 and $type1 eq $type2;
         }
     }
-    return @recommend if @recommend;
+    return @recommended if @recommended;
 
-    @recommend = $self->effective(), $self->advantage();
-    for( my $i = 0; $i <= @recommend; $i++ ) {
-        next unless $recommend[$i];
+    @recommended = $self->effective(), $self->advantage();
+    for( my $i = 0; $i <= @recommended; $i++ ) {
+        next unless $recommended[$i];
         foreach my $type ( $self->disadvantage() ) {
-            splice @recommend, $i, 1 if $type eq $recommend[$i];
+            splice @recommended, $i, 1 if $type eq $recommended[$i];
         }
     }
-    return @recommend;
+    return @recommended;
 }
 
 1;

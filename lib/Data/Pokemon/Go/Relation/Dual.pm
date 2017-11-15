@@ -142,33 +142,33 @@ override 'disadvantage' => sub {
     return;
 };
 
-override 'recommend' => sub {
+override 'recommended' => sub {
     my $self = shift;
     return super() if @{ $self->types() } == 1;
 
-    my @recommend = ();
+    my @recommended = ();
     foreach my $type1 ( $self->effective() ){
         foreach my $type2 ( $self->advantage() ){
-            push @recommend, $type1 if $type1 && $type2 and $type1 eq $type2;
+            push @recommended, $type1 if $type1 && $type2 and $type1 eq $type2;
         }
     }
-    @recommend = ( $self->effective(), $self->advantage() ) unless @recommend;
+    @recommended = ( $self->effective(), $self->advantage() ) unless @recommended;
     my $effective = $self->effective();
     if (
         $effective
         and not grep{ /^$effective$/ } $self->disadvantage()
-        and not grep{ /^$effective$/ } @recommend
+        and not grep{ /^$effective$/ } @recommended
     ) {
-        unshift @recommend, $effective;
+        unshift @recommended, $effective;
     }
 
-    for( my $i = 0; $i <= @recommend; $i++ ) {
-        next unless $recommend[$i];
+    for( my $i = 0; $i <= @recommended; $i++ ) {
+        next unless $recommended[$i];
         foreach my $type ( $self->disadvantage() ) {
-                splice @recommend, $i, 1 if $type eq $recommend[$i];
+                splice @recommended, $i, 1 if $type eq $recommended[$i];
         }
     }
-    return @recommend;
+    return @recommended;
 };
 
 __PACKAGE__->meta->make_immutable;

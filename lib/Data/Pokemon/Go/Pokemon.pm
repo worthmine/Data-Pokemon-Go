@@ -98,9 +98,9 @@ sub disadvantage {
     return Data::Pokemon::Go::Relation->new( types => $self->types() )->disadvantage();
 };
 
-sub recommend {
+sub recommended {
     my $self = shift;
-    return Data::Pokemon::Go::Relation->new( types => $self->types() )->recommend();
+    return Data::Pokemon::Go::Relation->new( types => $self->types() )->recommended();
 };
 
 sub stamina {
