@@ -47,7 +47,7 @@ Data::Pokemon::Go is the helper module for who has less knowledge about Pokemons
 
 =back
 
-I can't support all of the above at just only me alone.
+I can't support all of the above with just only me alone.
 So, please L<PR|https://github.com/worthmine/Data-Pokemon-Go/pulls>!
 
 =head1 LICENSE

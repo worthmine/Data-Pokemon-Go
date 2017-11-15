@@ -1,3 +1,7 @@
+data/MeCab.csv
+data/MeCab.dic
+lib/Data/Pokemon/Go/Role/Pokemon.pm
+
 /.build/
 /_build/
 /Build
