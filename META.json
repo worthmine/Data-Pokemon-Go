@@ -4,13 +4,13 @@
       "Yuki Yoshida <worthmine@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v3.0.13, CPAN::Meta::Converter version 2.150010",
+   "generated_by" : "Minilla/v3.0.13, CPAN::Meta::Converter version 2.150005",
    "license" : [
       "perl_5"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
-      "version" : 2
+      "version" : "2"
    },
    "name" : "Data-Pokemon-Go",
    "no_index" : {
@@ -42,30 +42,38 @@
       },
       "runtime" : {
          "requires" : {
-            "Text::CSV_XS" : "1.34",
-            "YAML::XS" : "0.66",
+            "List::Util" : "0",
+            "Moose" : "0",
+            "Moose::Role" : "0",
+            "Moose::Util::TypeConstraints" : "0",
+            "Path::Tiny" : "0",
+            "YAML::XS" : "0",
             "perl" : "5.008001"
          }
       },
       "test" : {
          "requires" : {
-            "Test::More" : "1.302"
+            "Test::More" : "1.302",
+            "Text::CSV_XS" : "0"
          }
       }
    },
    "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/worthmine/Data-Pokemon-Go/issues"
+         "web" : "https://github.com/AnaTofuZ/Data-Pokemon-Go/issues"
       },
-      "homepage" : "https://github.com/worthmine/Data-Pokemon-Go",
+      "homepage" : "https://github.com/AnaTofuZ/Data-Pokemon-Go",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/worthmine/Data-Pokemon-Go.git",
-         "web" : "https://github.com/worthmine/Data-Pokemon-Go"
+         "url" : "git://github.com/AnaTofuZ/Data-Pokemon-Go.git",
+         "web" : "https://github.com/AnaTofuZ/Data-Pokemon-Go"
       }
    },
    "version" : "0.01",
    "x_authority" : "cpan:WORTHMINE",
-   "x_serialization_backend" : "JSON::PP version 2.93"
+   "x_contributors" : [
+      "AnaTofuZ <anatofuz@gmail.com>"
+   ],
+   "x_serialization_backend" : "JSON::PP version 2.27300"
 }
