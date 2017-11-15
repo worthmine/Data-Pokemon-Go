@@ -1,0 +1,192 @@
+ノーマル:
+    disadvantage:
+    valid:
+        - いわ
+        - はがね
+    advantage:
+        - ゴースト
+かくとう:
+    disadvantage:
+        - ノーマル
+        - いわ
+        - はがね
+        - こおり
+        - あく
+    valid:
+        - どく
+        - ひこう
+        - むし
+        - エスパー
+        - フェアリー
+    advantage:
+        - ゴースト
+どく:
+    disadvantage:
+        - くさ
+        - フェアリー
+    valid:
+        - どく
+        - じめん
+        - いわ
+        - ゴースト
+    advantage:
+        - はがね
+じめん:
+    disadvantage:
+        - どく
+        - いわ
+        - はがね
+        - ほのお
+        - でんき
+    valid:
+        - むし
+        - くさ
+    advantage:
+        - ひこう
+ひこう:
+    disadvantage:
+        - かくとう
+        - むし
+        - くさ
+    valid:
+        - いわ
+        - はがね
+        - でんき
+    advantage:
+むし:
+    disadvantage:
+        - くさ
+        - エスパー
+        - あく
+    valid:
+        - かくとう
+        - どく
+        - ひこう
+        - ゴースト
+        - はがね
+        - ほのお
+        - フェアリー
+    advantage:
+いわ:
+    disadvantage:
+        - ひこう
+        - むし
+        - ほのお
+        - こおり
+    valid:
+        - かくとう
+        - じめん
+        - はがね
+    advantage:
+ゴースト:
+    disadvantage:
+        - ゴースト
+        - エスパー
+    valid:
+        - あく
+    advantage:
+        - ノーマル
+はがね:
+    disadvantage:
+        - いわ
+        - こおり
+        - フェアリー
+    valid:
+        - はがね
+        - ほのお
+        - みず
+        - でんき
+    advantage:
+ほのお:
+    disadvantage:
+        - むし
+        - はがね
+        - くさ
+        - こおり
+    valid:
+        - いわ
+        - ほのお
+        - みず
+        - ドラゴン
+    advantage:
+みず:
+    disadvantage:
+        - じめん
+        - いわ
+        - ほのお
+    valid:
+        - みず
+        - くさ
+        - ドラゴン
+    advantage:
+でんき:
+    disadvantage:
+        - ひこう
+        - みず
+    valid:
+        - でんき
+        - くさ
+        - ドラゴン
+    advantage:
+        - じめん
+くさ:
+    disadvantage:
+        - じめん
+        - いわ
+        - みず
+    valid:
+        - どく
+        - ひこう
+        - むし
+        - はがね
+        - ほのお
+        - くさ
+        - ドラゴン
+    advantage:
+こおり:
+    disadvantage:
+        - じめん
+        - ひこう
+        - くさ
+        - ドラゴン
+    valid:
+        - はがね
+        - ほのお
+        - みず
+        - こおり
+    advantage:
+エスパー:
+    disadvantage:
+        - かくとう
+        - どく
+    valid:
+        - はがね
+        - あく
+    advantage:
+        - エスパー
+ドラゴン:
+    disadvantage:
+        - ドラゴン
+    valid:
+        - はがね
+    advantage:
+        - フェアリー
+あく:
+    disadvantage:
+        - ゴースト
+        - エスパー
+    valid:
+        - かくとう
+        - あく
+        - フェアリー
+    advantage:
+フェアリー:
+    disadvantage:
+        - かくとう
+        - ドラゴン
+        - あく
+    valid:
+        - どく
+        - はがね
+        - ほのお
+    advantage:
