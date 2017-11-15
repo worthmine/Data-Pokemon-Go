@@ -19,20 +19,16 @@ my $data = YAML::XS::LoadFile($in_file);
 map{ $data->{$_}{name} = $_ } keys %$data;
 our @All = map{ $_->{name} } sort{ $a->{ID} cmp $b->{ID} } values %$data;
 enum 'PokemonName' => \@All;
-has name    => ( is => 'rw', isa => 'PokemonName' );
+has name => ( is => 'rw', isa => 'PokemonName' );
+
+before 'name' => sub {
+    my $self = shift;
+    my $name = shift;
+    croak "unvalid name" if $name and not $self->exists($name);
+};
 
 __PACKAGE__->meta->make_immutable;
 no Moose;
-
-unless( -s 'data/MeCab.csv' ) {
-    require Text::CSV_XS;
-    my $csv = Text::CSV_XS->new ({ binary => 1, quote_char => undef });
-    open my $fh, ">:encoding(utf8)", 'data/MeCab.csv' or die "Couldn't open CSV: $!";
-        $csv->say( $fh, $_ ) for map{
-            [ $_, 1, 1, 1, '名詞', '固有名詞', 'ポケモン', '*', '*', '*', $_, $_, $_ ]
-        } @All;
-    close $fh or die "Couldn't write CSV: $!";
-}
 
 sub exists {
     my $self = shift;

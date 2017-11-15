@@ -1,7 +1,6 @@
 package Data::Pokemon::Go::Relation::Single;
 use 5.008001;
 use Carp;
-use utf8;
 
 use Moose;
 use Moose::Util::TypeConstraints;

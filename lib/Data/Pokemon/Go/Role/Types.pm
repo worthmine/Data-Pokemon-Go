@@ -11,15 +11,14 @@ our @All = qw(
     エスパー ドラゴン あく フェアリー
 );
 
-enum 'Type' => [ @All, 'ランダム' ];
-has type => ( is => 'rw', default => 'ノーマル', isa => 'Type' );
+enum 'Type' => @All;
+has types => ( is => 'rw', default => 'ノーマル', isa => 'Type' );
 
 no Moose::Role;
 
+# initialize ==============================================================
 use Path::Tiny;
 use YAML::XS;
-
-# initialize ==============================================================
 
 my $relation = path( 'data', 'Relations.yaml' );
 our $Ref_Advantage = YAML::XS::LoadFile($relation);
@@ -29,10 +28,9 @@ while( my( $type, $ref ) = each %$Ref_Advantage ){
     while( my( $relation, $values ) = each %$ref ){
         next unless ref $values;
         foreach my $value (@$values){
-             push @{$Relations->{$value}{invalid}}, $type
-            if $relation eq 'void' or $relation eq 'invalid';
-             push @{$Relations->{$value}{effective}}, $type
-            if $relation eq 'effective';
+            push @{$Relations->{$value}{invalid}}, $type if $relation eq 'invalid';
+            unshift @{$Relations->{$value}{invalid}}, $type if $relation eq 'void';
+            push @{$Relations->{$value}{effective}}, $type if $relation eq 'effective';
         }
     }
 }

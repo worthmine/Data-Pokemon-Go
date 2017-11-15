@@ -20,14 +20,15 @@ has name => ( is => 'rw', isa => 'SkillName' );
 
 has own_type => ( is => 'rw', isa => 'ArrayRef[Type]' );
 
-around 'type' => sub {
+around 'types' => sub {
     my $orig = shift;
     my $self = shift;
     my $name = $self->name();
     my $type = $data->{$name}{type};
     die "Type may be invalid: $type" unless $type;
     die "Type may be invalid: $type" unless $name eq 'めざめるパワー' or grep{ $type eq $_ } @Data::Pokemon::Go::Role::Types::All;
-    return $self->$orig($type);
+    return $self->$orig($type) unless $name eq 'めざめるパワー';
+    return 'ランダム';
 };
 
 __PACKAGE__->meta->make_immutable;

@@ -26,6 +26,7 @@ subtest 'Kanto' => sub {
         note '有利なタイプは ', join ',', $pg->advantage();
         note '不利なタイプは ', join ',', $pg->disadvantage();
         note 'オススメのタイプは ', join ',', $pg->recommend();
+
         my $count = 0;
         foreach my $type ( $pg->recommend() ){
             $count += grep{ $_ eq $type } @Data::Pokemon::Go::Role::Types::All;

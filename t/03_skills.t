@@ -10,6 +10,7 @@ binmode $builder->todo_output,    ":utf8";
 binmode STDERR,                   ":utf8";
 
 use lib './lib';
+
 use_ok 'Data::Pokemon::Go::Skill';                                      # 1
 my $pg = new_ok 'Data::Pokemon::Go::Skill';                             # 2
 
@@ -19,7 +20,7 @@ subtest 'Kanto' => sub {
     foreach my $name (@skills) {
         next unless $pg->exists($name);
         $pg->name($name);
-        note "${\$name}は", join( '／', $pg->type() ), "タイプ";
+        note "${\$name}は", join( '／', $pg->types() ), "タイプ";
         note '威力は' . $pg->strength();
         note '回復量は', $pg->energy() unless $pg->gauges();
         note 'ゲージ数は', $pg->gauges() if $pg->gauges();
