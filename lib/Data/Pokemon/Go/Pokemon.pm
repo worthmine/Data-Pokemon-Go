@@ -21,14 +21,8 @@ our @All = map{ $_->{name} } sort{ $a->{ID} cmp $b->{ID} } values %$data;
 enum 'PokemonName' => \@All;
 has name    => ( is => 'rw', isa => 'PokemonName' );
 
-=cut
-
-has CP      => ( is => 'rw', default => 10, isa => 'Int' );
-has HP      => ( is => 'rw', default => 1,  isa => 'Int' );
-has AT      => ( is => 'rw', default => 1,  isa => 'Int' );
-has DF      => ( is => 'rw', default => 1,  isa => 'Int' );
-
-=cut
+__PACKAGE__->meta->make_immutable;
+no Moose;
 
 unless( -s 'data/MeCab.csv' ) {
     require Text::CSV_XS;
@@ -87,9 +81,6 @@ sub special {
     }
     return @skill;
 }
-
-__PACKAGE__->meta->make_immutable;
-no Moose;
 
 sub effective {
     my $self = shift;
@@ -173,4 +164,3 @@ it under the same terms as Perl itself.
 Yuki Yoshida E<lt>worthmine@gmail.comE<gt>
 
 =cut
-

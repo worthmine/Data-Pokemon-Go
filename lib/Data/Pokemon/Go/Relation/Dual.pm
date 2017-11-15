@@ -1,4 +1,4 @@
-package Data::Pokemon::Go::Relation::Multi;
+package Data::Pokemon::Go::Relation::Dual;
 use 5.008001;
 
 use Moose;
@@ -181,15 +181,15 @@ __END__
 
 =head1 NAME
 
-Data::Pokemon::Go::Relation - It's new $module
+Data::Pokemon::Go::Relation::Dual - It's new $module
 
 =head1 SYNOPSIS
 
-    use Data::Pokemon::Go::Relaition;
+    use Data::Pokemon::Go::Relation::Dual;
 
 =head1 DESCRIPTION
 
-Data::Pokemon::Go::Relaition is ...
+Data::Pokemon::Go::Relation::Dual is ...
 
 =head1 LICENSE
 

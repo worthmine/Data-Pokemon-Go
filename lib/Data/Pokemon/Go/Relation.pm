@@ -2,11 +2,11 @@ package Data::Pokemon::Go::Relation;
 use 5.008001;
 
 use Moose;
-extends 'Data::Pokemon::Go::Relation::Multi';
+extends 'Data::Pokemon::Go::Relation::Dual';
 
 sub BUILD {
     my $self = shift;
-    return Data::Pokemon::Go::Relation::Multi->new(@_);
+    return Data::Pokemon::Go::Relation::Dual->new(@_);
 }
 
 __PACKAGE__->meta->make_immutable;
@@ -19,15 +19,15 @@ __END__
 
 =head1 NAME
 
-Data::Pokemon::Go::Relaition - It's new $module
+Data::Pokemon::Go::Relation - It's new $module
 
 =head1 SYNOPSIS
 
-    use Data::Pokemon::Go::Relaition;
+    use Data::Pokemon::Go::Relation;
 
 =head1 DESCRIPTION
 
-Data::Pokemon::Go::Relaition is ...
+Data::Pokemon::Go::Relation is ...
 
 =head1 LICENSE
 
@@ -41,4 +41,3 @@ it under the same terms as Perl itself.
 Yuki Yoshida E<lt>worthmine@gmail.comE<gt>
 
 =cut
-

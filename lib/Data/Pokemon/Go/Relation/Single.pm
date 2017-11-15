@@ -115,15 +115,15 @@ __END__
 
 =head1 NAME
 
-Data::Pokemon::Go::Relaition - It's new $module
+Data::Pokemon::Go::Relation::Single - It's new $module
 
 =head1 SYNOPSIS
 
-    use Data::Pokemon::Go::Relaition;
+    use Data::Pokemon::Go::Relation::Single;
 
 =head1 DESCRIPTION
 
-Data::Pokemon::Go::Relaition is ...
+Data::Pokemon::Go::Relation::Single is ...
 
 =head1 LICENSE
 
