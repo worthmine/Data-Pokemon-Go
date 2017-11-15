@@ -71,7 +71,7 @@
          "web" : "https://github.com/worthmine/Data-Pokemon-Go"
       }
    },
-   "version" : "0.01",
+   "version" : "0.02",
    "x_authority" : "cpan:WORTHMINE",
    "x_contributors" : [
       "AnaTofuZ <anatofuz@gmail.com>",
