@@ -1,7 +1,6 @@
 package Data::Pokemon::Go::Skill;
 use 5.008001;
-#use utf8;
-use Encode;
+use utf8;
 
 use Moose;
 use Moose::Util::TypeConstraints;
