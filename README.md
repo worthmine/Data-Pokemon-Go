@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/worthmine/Data-Pokemon-Go.svg?branch=master)](https://travis-ci.org/worthmine/Data-Pokemon-Go)
 # NAME
 
 Data::Pokemon::Go - It's new $module

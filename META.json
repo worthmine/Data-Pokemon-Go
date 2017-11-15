@@ -42,6 +42,8 @@
       },
       "runtime" : {
          "requires" : {
+            "Text::CSV_XS" : "1.34",
+            "YAML::XS" : "0.66",
             "perl" : "5.008001"
          }
       },
