@@ -3,6 +3,7 @@ use strict;
 use warnings;
 
 use Test::More 1.302 tests => 3;
+
 my $builder = Test::More->builder;
 binmode $builder->output,         ":utf8";
 binmode $builder->failure_output, ":utf8";

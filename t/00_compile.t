@@ -1,5 +1,5 @@
 use strict;
-use Test::More 0.98;
+use Test::More 0.98 tests => 2;
 
 use lib './lib';
 

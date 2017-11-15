@@ -1,6 +1,7 @@
 package Data::Pokemon::Go::Role::Types;
 use 5.008001;
 use utf8;
+use Encode;
 
 use Moose::Role;
 use Moose::Util::TypeConstraints;
@@ -25,9 +26,11 @@ our $Ref_Advantage = YAML::XS::LoadFile($relation);
 our $Relations = {};
 
 while( my( $type, $ref ) = each %$Ref_Advantage ){
+#    $type = encode_utf8($type);
     while( my( $relation, $values ) = each %$ref ){
         next unless ref $values;
         foreach my $value (@$values){
+#            $value = encode_utf8($value);
             push @{$Relations->{$value}{invalid}}, $type if $relation eq 'invalid';
             unshift @{$Relations->{$value}{invalid}}, $type if $relation eq 'void';
             push @{$Relations->{$value}{effective}}, $type if $relation eq 'effective';

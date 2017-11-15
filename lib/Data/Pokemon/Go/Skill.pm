@@ -1,6 +1,7 @@
 package Data::Pokemon::Go::Skill;
 use 5.008001;
-use utf8;
+#use utf8;
+use Encode;
 
 use Moose;
 use Moose::Util::TypeConstraints;
@@ -24,6 +25,7 @@ around 'types' => sub {
     my $orig = shift;
     my $self = shift;
     my $name = $self->name();
+#    my $type = decode_utf8( $data->{$name}{type} );
     my $type = $data->{$name}{type};
     die "Type may be invalid: $type" unless $type;
     die "Type may be invalid: $type" unless $name eq 'めざめるパワー' or grep{ $type eq $_ } @Data::Pokemon::Go::Role::Types::All;
