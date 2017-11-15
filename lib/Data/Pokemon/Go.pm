@@ -33,6 +33,23 @@ Data::Pokemon::Go - Datas for every Pokemon in Pokemon Go
 
 Data::Pokemon::Go is the helper module for who has less knowledge about Pokemons
 
+=head1 TODO
+
+=over
+
+=item guessing the IVs from each infomations is not available
+
+=item supporting Multi-language is not available
+
+=item YAMLs for Johto and Hoenn Regions are not available
+
+=item Japanese documents are not available
+
+=back
+
+I can't support all of the above at just only me alone.
+So, please <PR|https://github.com/worthmine/Data-Pokemon-Go/pulls>!
+
 =head1 LICENSE
 
 Copyright (C) Yuki Yoshida.
