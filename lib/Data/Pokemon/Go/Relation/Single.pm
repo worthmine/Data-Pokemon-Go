@@ -1,38 +1,12 @@
 package Data::Pokemon::Go::Relation::Single;
 use 5.008001;
 use Carp;
+use utf8;
 
 use Moose;
 use Moose::Util::TypeConstraints;
 
-use Data::Pokemon::Go::Types;
-
-use Path::Tiny;
-use YAML::XS;
-
-# initialize ==============================================================
-
-my $relation = path( 'data', 'Advantage.yaml' );
-my $ref_advantage = YAML::XS::LoadFile($relation);
-
-my $datas = {};
-my $relations = {};
-while( my( $type, $ref ) = each %$ref_advantage ){
-    while( my( $relation, $values ) = each %$ref ){
-        next unless ref $values;
-        push @{$datas->{$type}{void}}, @$values if $relation eq 'advantage';
-        push @{$datas->{$type}{invalid}}, @$values if $relation eq 'valid';
-        push @{$datas->{$type}{effective}}, @$values if $relation eq 'disadvantage';
-
-        foreach my $value (@$values){
-             push @{$relations->{$value}{invalid}}, $type
-            if $relation eq 'advantage' or $relation eq 'valid';
-             push @{$relations->{$value}{effective}}, $type
-            if $relation eq 'disadvantage';
-
-        }
-    }
-}
+with 'Data::Pokemon::Go::Role::Types';
 
 # accessor methods ========================================================
 
@@ -45,13 +19,16 @@ has types => ( is => 'ro', isa => 'Types', coerce => 1, required => 1 );
 __PACKAGE__->meta->make_immutable;
 no Moose;
 
+my $relations = $Data::Pokemon::Go::Role::Types::Relations;
+my $ref_advantage = $Data::Pokemon::Go::Role::Types::Ref_Advantage;
+
 # subroutine ==============================================================
 
 sub effective {
     my $self = shift;
     my $type = $self->types()->[0];
     my $data = $relations->{$type};
-    return @{ $data->{effective} } if $data->{effective};
+    return @{ $data->{effective} || [] } if $data->{effective};
     return;
 }
 
@@ -69,8 +46,8 @@ sub advantage {
     my $self = shift;
     my $type = $self->types()->[0];
     my $data = $ref_advantage->{$type};
-    my @list = @{ $data->{valid} || [] };
-    unshift @list, @{ $data->{advantage} || [] };
+    my @list = @{ $data->{invalid} || [] };
+    unshift @list, @{ $data->{void} || [] };
     my $i = 0;
     foreach my $value (@list) {
         foreach my $type ( $self->invalid() ){
@@ -85,7 +62,7 @@ sub disadvantage {
     my $self = shift;
     my $type = $self->types()->[0];
     my $data = $ref_advantage->{$type};
-    return @{ $data->{disadvantage} || [] };
+    return @{ $data->{effective} || [] };
 }
 
 sub recommend {

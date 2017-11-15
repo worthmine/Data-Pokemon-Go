@@ -5,7 +5,7 @@ use utf8;
 use Moose;
 use Moose::Util::TypeConstraints;
 
-extends 'Data::Pokemon::Go::Types';
+with 'Data::Pokemon::Go::Role::Types';
 
 use Path::Tiny;
 my $in_file = path( 'data', 'Skill.yaml' );
@@ -20,13 +20,14 @@ has name => ( is => 'rw', isa => 'SkillName' );
 
 has own_type => ( is => 'rw', isa => 'ArrayRef[Type]' );
 
-override 'types' => sub {
+around 'type' => sub {
+    my $orig = shift;
     my $self = shift;
     my $name = $self->name();
     my $type = $data->{$name}{type};
     die "Type may be invalid: $type" unless $type;
-    die "Type may be invalid: $type" unless $name eq 'めざめるパワー' or grep{ $type eq $_ } @Data::Pokemon::Go::Types::All;
-    return $type;
+    die "Type may be invalid: $type" unless $name eq 'めざめるパワー' or grep{ $type eq $_ } @Data::Pokemon::Go::Role::Types::All;
+    return $self->$orig($type);
 };
 
 __PACKAGE__->meta->make_immutable;
@@ -89,13 +90,14 @@ sub point {
     my $point = $self->gauges()?
         ( $self->strength * 1000 - $self->motion ) / ( $self->motion + 1000 ) * 100:
         ( ( $self->strength + $self->energy ) / 2 * 1000  - $self->motion )/ $self->motion * 100;
-    return sprintf('%2d.%02d', int $point / 100, $point % 100 );
+    return sprintf('%2d.%02d', int $point / 100, $point % 100 ) if $point > 0;
+    return '0.00';
 }
 
 sub as_string {
     my $self = shift;
     my $better = '';
-    $better = '(タイプ一致)' if grep{ $_ eq $self->types() } @{ $self->own_type() || [] };
+    $better = '(タイプ一致)' if grep{ $_ eq $self->type() } @{ $self->own_type() || [] };
     my $str = $self->gauges()?
         sprintf("%s(%s) 攻撃力:%.2f DPS:%.2f ゲージ数:%d 評価:%.2f%s\n",
             $self->name,

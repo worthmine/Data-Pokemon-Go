@@ -2,7 +2,7 @@ use utf8;
 use strict;
 use warnings;
 
-use Test::More 1.302;
+use Test::More 1.302 tests => 3;
 my $builder = Test::More->builder;
 binmode $builder->output,         ":utf8";
 binmode $builder->failure_output, ":utf8";
@@ -22,7 +22,6 @@ subtest 'Kanto' => sub {
     plan tests => 151;
     foreach my $name (@pokemon) {
         next unless $pg->exists($name);
-        #    my $name = 'フシギダネ';
         $pg->name($name);
         my $id = $pg->id;
         note $pg->name . "($id)は" . join( '／', @{$pg->types()} ) . "タイプ";
