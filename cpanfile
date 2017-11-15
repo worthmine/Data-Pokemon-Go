@@ -5,6 +5,7 @@ requires 'Moose::Util::TypeConstraints';
 requires 'Path::Tiny';
 requires 'YAML::XS';
 requires 'perl', '5.008001';
+requires 'Text::CSV_XS', '1.34';
 
 on configure => sub {
     requires 'Module::Build::Tiny', '0.035';
