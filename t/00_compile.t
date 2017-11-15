@@ -3,9 +3,9 @@ use Test::More 0.98;
 
 use lib './lib';
 
-use_ok('Data::Pokemon::Go::Pokemon');
+use_ok('Data::Pokemon::Go::Pokemon');                                   # 1
 
-unless( -s 'data/MeCab.csv' ) {
+unless( -e 'data/MeCab.csv' ) {
     require Text::CSV_XS;
     my $csv = Text::CSV_XS->new ({ binary => 1, quote_char => undef });
     open my $fh, ">:encoding(utf8)", 'data/MeCab.csv' or die "Couldn't open CSV: $!";
@@ -14,5 +14,6 @@ unless( -s 'data/MeCab.csv' ) {
     } @Data::Pokemon::Go::Pokemon::All;
     close $fh or die "Couldn't write CSV: $!";
 }
+is -e 'data/MeCab.csv', 1, "Succeed to create data/MeCab.csv";          # 2
 
 done_testing();
