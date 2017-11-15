@@ -52,6 +52,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/worthmine/Data-Pokemon-Go/issues"
+      },
+      "homepage" : "https://github.com/worthmine/Data-Pokemon-Go",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/worthmine/Data-Pokemon-Go.git",
+         "web" : "https://github.com/worthmine/Data-Pokemon-Go"
+      }
+   },
    "version" : "0.01",
    "x_authority" : "cpan:WORTHMINE",
    "x_serialization_backend" : "JSON::PP version 2.93"

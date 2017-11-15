@@ -1,12 +1,18 @@
 language: perl
 sudo: false
-perl:
-  - "5.12"
-  - "5.14"
-  - "5.16"
-  - "5.18"
-  - "5.20"
-  - "5.22"
-  - "5.24"
-  - "5.26"
 
+perl:
+- '5.8'
+- '5.12'
+- '5.14'
+- '5.16'
+- '5.18'
+- '5.20'
+- '5.22'
+- '5.24'
+- '5.26'
+
+notifications:
+  email: false
+  slack:
+    secure: rR+tmMaT7Yj7vfXZ54buMlTaPopX/bMuiNfrSC+O8lxQCz69wU5UF5H5zh915/W5ZbpzUSkQXSsJATwMUAumFtjdbDjvQcB4qgMSuU3WbxKhBAlQh4RqKKE7lykUYjAWjD1i2k7sEW4AFwbEsJuNziemFkHW1htepyzJRSuze7JQDniAz/RhBl0q61Ot459vEGnaZUb6dQ3DbLjO/OD5YelNNOxdQGLjqcCtdFE0ENCqiH9j2odGTgJ6LaCxLXuhPMADeiiQaNrdLJK4UaicXtyprB/Oe1DW1TENg0onnH1q+kLcTTmdZDILMUizOIVw8XYQ/RiwREjjVPXXzMljc8v0SgbGMcmAns9o5zxU0h7410/FWTqooD8talcwhWlT3sz80CziT42J5Hq9AkiamBJJ83DKhfg9pJknkMedK0Ua1rXMk417TSClwPgqcu9SoqkKQxEsW9WnxEoQHgo0OO258r3ne90VpP8swuGunWqbhP0m1St/JdNHde3fBN+flHXl9iTz2ukT/eItiP+sYuMhsyRdCKpCaQjlc8PIxhNyZXp9d7Vn0PaZOeX9za8Kr/OOoH82f2wjC6kQ8nA8rPIXM4VJzAcDRZP5KOOT/RSC0SkikVggWFtDUoFjdkE590NZFRs93KHE7dDuzqIEintJjtzZZA5qOraZ6WMhqg8=
