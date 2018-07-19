@@ -106,29 +106,43 @@ sub recommended {
 sub stamina {
     my $self = shift;
     my $name = $self->name();
-    croak "'Stamina' is undefined for $name" unless exists $data->{$name}{Stamina};
+    croak "'Stamina' is undefined for $name" unless exists $data->{$name}{'Stamina'};
     return $data->{$name}{Stamina};
 }
 
 sub attack {
     my $self = shift;
     my $name = $self->name();
-    croak "'Attack' is undefined for $name" unless exists $data->{$name}{Attack};
+    croak "'Attack' is undefined for $name" unless exists $data->{$name}{'Attack'};
     return $data->{$name}{Attack};
 }
 
 sub defense {
     my $self = shift;
     my $name = $self->name();
-    croak "'Defense' is undefined for $name" unless exists $data->{$name}{Defense};
+    croak "'Defense' is undefined for $name" unless exists $data->{$name}{'Defense'};
     return $data->{$name}{Defense};
 }
 
 sub hatchedMAX {
     my $self = shift;
     my $name = $self->name();
-    croak "'HatchedMAX' is undefined for $name" unless exists $data->{$name}{HatchedMAX};
-    return $data->{$name}{HatchedMAX};
+    croak "'HatchedMAX' is undefined for $name" unless exists $data->{$name}{'MAXCP'}{'Hatched'};
+    return $data->{$name}{'MAXCP'}{'Hatched'};
+}
+
+sub rewardMAX {
+    my $self = shift;
+    my $name = $self->name();
+    croak "'HatchedMAX' is undefined for $name" unless exists $data->{$name}{'MAXCP'}{'Reward'};
+    return $data->{$name}{'MAXCP'}{'Reward'};
+}
+
+sub boostedMAX {
+    my $self = shift;
+    my $name = $self->name();
+    croak "'HatchedMAX' is undefined for $name" unless exists $data->{$name}{'MAXCP'}{'Boosted'};
+    return $data->{$name}{'MAXCP'}{'Boosted'};
 }
 
 1;
