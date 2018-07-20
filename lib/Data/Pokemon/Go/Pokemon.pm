@@ -14,21 +14,12 @@ use YAML::XS;
 use Path::Tiny;
 
 my $all = {};
-foreach my $region (qw|Kanto Johto Hoenn|){
+foreach my $region (qw|Kanto Johto Hoenn Alola|){
     my $in_file = path( 'data', "$region.yaml" );
     my $data = YAML::XS::LoadFile($in_file);
     map{ $data->{$_}{'name'} = $_ } keys %$data;
     %$all = ( %$all, %$data );
 }
-
-=cut
-
-my $in_file = path( 'data', "Alola.yaml" );
-my $data = YAML::XS::LoadFile($in_file);
-map{ $data->{$_}{'Alola'} = $_ } keys %$data;
-%$all = ( %$all, %$data );
-
-=cut
 
 our @All = map{ $_->{name} } sort{ $a->{ID} cmp $b->{ID} } values %$all;
 enum 'PokemonName' => \@All;

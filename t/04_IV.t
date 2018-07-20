@@ -42,7 +42,7 @@ sub IVs {
         SKIP: {
             skip "is Not Available", 2 if $pg->isNotAvailable();
             my $id = $pg->id;
-            note ($pg->isAlola? 'アローラの姿の': '' ) . $pg->name . "($id)は" . join( '／', @{$pg->types()} ) . "タイプ";
+            note $pg->name . "($id)は" . join( '／', @{$pg->types()} ) . "タイプ";
             note '種族値は';
             note 'HPが' . $pg->stamina();
             note '攻撃が' . $pg->attack();
