@@ -17,9 +17,18 @@ my $all = {};
 foreach my $region (qw|Kanto Johto Hoenn|){
     my $in_file = path( 'data', "$region.yaml" );
     my $data = YAML::XS::LoadFile($in_file);
-    map{ $data->{$_}{name} = $_ } keys %$data;
+    map{ $data->{$_}{'name'} = $_ } keys %$data;
     %$all = ( %$all, %$data );
 }
+
+=cut
+
+my $in_file = path( 'data', "Alola.yaml" );
+my $data = YAML::XS::LoadFile($in_file);
+map{ $data->{$_}{'Alola'} = $_ } keys %$data;
+%$all = ( %$all, %$data );
+
+=cut
 
 our @All = map{ $_->{name} } sort{ $a->{ID} cmp $b->{ID} } values %$all;
 enum 'PokemonName' => \@All;
@@ -131,21 +140,14 @@ sub defense {
 sub hatchedMAX {
     my $self = shift;
     my $name = $self->name();
-    croak "'HatchedMAX' is undefined for $name" unless exists $all->{$name}{'MAXCP'}{'Hatched'};
+    croak "'Hatched' is undefined for $name" unless exists $all->{$name}{'MAXCP'}{'Hatched'};
     return $all->{$name}{'MAXCP'}{'Hatched'};
-}
-
-sub rewardMAX {
-    my $self = shift;
-    my $name = $self->name();
-    croak "'HatchedMAX' is undefined for $name" unless exists $all->{$name}{'MAXCP'}{'Reward'};
-    return $all->{$name}{'MAXCP'}{'Reward'};
 }
 
 sub boostedMAX {
     my $self = shift;
     my $name = $self->name();
-    croak "'HatchedMAX' is undefined for $name" unless exists $all->{$name}{'MAXCP'}{'Boosted'};
+    croak "'Boosted' is undefined for $name" unless exists $all->{$name}{'MAXCP'}{'Boosted'};
     return $all->{$name}{'MAXCP'}{'Boosted'};
 }
 
@@ -159,6 +161,12 @@ sub isNotAvailable {
     my $self = shift;
     my $name = $self->name();
     return $all->{$name}{'isNotAvailable'};
+}
+
+sub isAlola {
+    my $self = shift;
+    my $name = $self->name();
+    return $all->{$name}{'isAlola'};
 }
 
 1;
