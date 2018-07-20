@@ -3,7 +3,6 @@
         ja: コラッタ
         en: Rattata
     ID: 019
-    isAlola: 1
     Types:
     - あく
     - ノーマル
@@ -28,7 +27,6 @@
         ja: ラッタ
         en: Raticate
     ID: 020
-    isAlola: 1
     Types:
         - あく
         - ノーマル
@@ -52,7 +50,6 @@
         ja: ライチュウ
         en: Raichu
     ID: 026
-    isAlola: 1
     Types:
         - でんき
         - エスパー
@@ -76,7 +73,6 @@
         ja: サンド
         en: Sandshrew
     ID: 027
-    isAlola: 1
     Types:
         - こおり
         - はがね
@@ -101,7 +97,6 @@
         ja: サンドパン
         en: Sandslash
     ID: 028
-    isAlola: 1
     Types:
         - こおり
         - はがね
@@ -125,7 +120,6 @@
         ja: ロコン
         en: Vulpix
     ID: 037
-    isAlola: 1
     Types:
         - こおり
     Skill:
@@ -149,7 +143,6 @@
         ja: キュウコン
         en: Ninetales
     ID: 038
-    isAlola: 1
     Types:
         - こおり
         - フェアリー
@@ -173,7 +166,6 @@
         ja: ディグダ
         en: Diglett
     ID: 050
-    isAlola: 1
     Types:
         - じめん
         - はがね
@@ -198,7 +190,6 @@
         ja: ダグトリオ
         en: Dugtrio
     ID: 051
-    isAlola: 1
     Types:
         - じめん
         - はがね
@@ -222,7 +213,6 @@
         ja: ニャース
         en: Meowth
     ID: 052
-    isAlola: 1
     Types:
         - あく
     Skill:
@@ -246,7 +236,6 @@
         ja: ペルシアン
         en: Persian
     ID: 053
-    isAlola: 1
     Types:
         - あく
     Skill:
@@ -269,7 +258,6 @@
         ja: イシツブテ
         en: Geodude
     ID: 074
-    isAlola: 1
     Types:
         - いわ
         - でんき
@@ -294,7 +282,6 @@
         ja: ゴローン
         en: Graveler
     ID: 075
-    isAlola: 1
     Types:
         - いわ
         - でんき
@@ -319,7 +306,6 @@
         ja: ゴローニャ
         en: Golem
     ID: 076
-    isAlola: 1
     Types:
         - いわ
         - でんき
@@ -343,7 +329,6 @@
         ja: ベトベター
         en: Grimer
     ID: 088
-    isAlola: 1
     Types:
         - どく
         - あく
@@ -368,7 +353,6 @@
         ja: ベトベトン
         en: Muk
     ID: 089
-    isAlola: 1
     Types:
         - どく
         - あく
@@ -392,7 +376,6 @@
         ja: ナッシー
         en: Exeggutor
     ID: 103
-    isAlola: 1
     Types:
         - くさ
         - ドラゴン
@@ -416,7 +399,6 @@
         ja: ガラガラ
         en: Marowak
     ID: 105
-    isAlola: 1
     Types:
         - ほのお
         - ゴースト
