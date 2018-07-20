@@ -14,8 +14,8 @@ use lib './lib';
 use_ok 'Data::Pokemon::Go::Pokemon';                                    # 1
 my $pg = new_ok 'Data::Pokemon::Go::Pokemon';                           # 2
 
-subtest 'Recommend' => sub {
-    plan tests => 251;
+subtest 'Recommend' => sub {                                            # 3
+    plan tests => scalar @Data::Pokemon::Go::Pokemon::All;
     foreach my $name (@Data::Pokemon::Go::Pokemon::All) {
         next unless $pg->exists($name);
         $pg->name($name);

@@ -12,10 +12,9 @@ my $skill = Data::Pokemon::Go::Skill->new();
 
 use YAML::XS;
 use Path::Tiny;
-#my $in_file = path( 'data', 'Pokemon.yaml' );
 
 my $all = {};
-foreach my $region (qw|Kanto Johto|){
+foreach my $region (qw|Kanto Johto Hoenn|){
     my $in_file = path( 'data', "$region.yaml" );
     my $data = YAML::XS::LoadFile($in_file);
     map{ $data->{$_}{name} = $_ } keys %$data;

@@ -2,7 +2,7 @@ use utf8;
 use strict;
 use warnings;
 
-use Test::More 1.302 tests => 4;
+use Test::More 1.302 tests => 5;
 use Path::Tiny;
 use YAML::XS;
 
@@ -22,6 +22,7 @@ my $IV = new_ok 'Data::Pokemon::Go::IV';                                # 2
 
 subtest 'Kanto' => sub{ IVs('Kanto') };                                 # 3
 subtest 'Johto' => sub{ IVs('Johto') };                                 # 4
+subtest 'Hoenn' => sub{ IVs('Hoenn') };                                 # 5
 
 done_testing();
 
