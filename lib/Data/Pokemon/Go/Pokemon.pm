@@ -128,6 +128,14 @@ sub defense {
     return $all->{$name}{Defense};
 }
 
+sub MAX {
+    my $self = shift;
+    my $when = shift;
+    my $name = $self->name();
+    croak "'$when' is undefined for $name" unless exists $all->{$name}{'MAXCP'}{$when};
+    return $all->{$name}{'MAXCP'}{$when};
+}
+
 sub hatchedMAX {
     my $self = shift;
     my $name = $self->name();
@@ -140,6 +148,13 @@ sub boostedMAX {
     my $name = $self->name();
     croak "'Boosted' is undefined for $name" unless exists $all->{$name}{'MAXCP'}{'Boosted'};
     return $all->{$name}{'MAXCP'}{'Boosted'};
+}
+
+sub grownMAX {
+    my $self = shift;
+    my $name = $self->name();
+    croak "'Grown' is undefined for $name" unless exists $all->{$name}{'MAXCP'}{'Grown'};
+    return $all->{$name}{'MAXCP'}{'Grown'};
 }
 
 sub isNotWild {

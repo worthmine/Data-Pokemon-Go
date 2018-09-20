@@ -24,6 +24,7 @@ sub _calculate_CP {
     croak "argument 'DF' is required" unless exists $arg{DF};
 
     my $pg = Data::Pokemon::Go::Pokemon->new( name => $arg{name} );
+    return undef if $pg->isNotAvailable();
     my $stamina = $pg->stamina() + $arg{ST};
     my $attack = $pg->attack() + $arg{AT};
     my $defense = $pg->defense() + $arg{DF};
