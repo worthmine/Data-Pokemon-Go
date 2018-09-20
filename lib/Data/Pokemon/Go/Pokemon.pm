@@ -12,7 +12,7 @@ my $skill = Data::Pokemon::Go::Skill->new();
 
 use YAML::XS;
 use Path::Tiny;
-use FindBin::libs qw( export );
+#use FindBin::libs qw( export );
 
 my $all = {};
 foreach my $region (qw|Kanto Johto Hoenn Alola|){
