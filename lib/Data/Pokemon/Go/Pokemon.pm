@@ -12,10 +12,11 @@ my $skill = Data::Pokemon::Go::Skill->new();
 
 use YAML::XS;
 use Path::Tiny;
+use FindBin::libs qw( export );
 
 my $all = {};
 foreach my $region (qw|Kanto Johto Hoenn Alola|){
-    my $in_file = path( 'data', "$region.yaml" );
+    my $in_file = path( $lib[0], '..', 'data', "$region.yaml" );
     my $data = YAML::XS::LoadFile($in_file);
     map{ $data->{$_}{'name'} = $_ } keys %$data;
     %$all = ( %$all, %$data );
