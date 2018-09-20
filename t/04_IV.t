@@ -42,28 +42,25 @@ sub IVs {
     foreach my $name (@pokemons) {
         next unless $pg->exists($name);
         $pg->name($name);
-        SKIP: {
-            skip "is Not Available", 2 if $pg->isNotAvailable();
-            my $id = $pg->id;
-            note $pg->name . "($id)は" . join( '／', @{$pg->types()} ) . "タイプ";
-            note '種族値は';
-            note 'HPが' . $pg->stamina();
-            note '攻撃が' . $pg->attack();
-            note '防御が' . $pg->defense();
-            my $CP;
-            if ( $pg->isNotAvailable() ) {
-                $CP = $IV->_calculate_CP( name => $name, LV => 40, ST => 15, AT => 15, DF => 15 );
-                note "MAX成長時の個体値完璧の時のCPは$CP";
-                is $CP, $pg->MAX('Grown'), "calculate CP for $name is ok";
-                skip 1;
-            }else{
-                $CP = $IV->_calculate_CP( name => $name, LV => 20, ST => 15, AT => 15, DF => 15 );
-                note "孵化時の個体値完璧の時のCPは$CP";
-                is $CP, $pg->hatchedMAX(), "calculate CP for $name is ok";
-                $CP = $IV->_calculate_CP( name => $name, LV => 25, ST => 15, AT => 15, DF => 15 );
-                note "ブースト時の個体値完璧の時のCPは$CP";
-                is $CP, $pg->boostedMAX(), "calculate CP for $name is ok";
-            }
+        my $id = $pg->id;
+        note $pg->name . "($id)は" . join( '／', @{$pg->types()} ) . "タイプ";
+        note '種族値は';
+        note 'HPが' . $pg->stamina();
+        note '攻撃が' . $pg->attack();
+        note '防御が' . $pg->defense();
+        my $CP;
+        if ( $pg->isNotAvailable() ) {
+            $CP = $IV->_calculate_CP( name => $name, LV => 40, ST => 15, AT => 15, DF => 15 );
+            note "MAX成長時の個体値完璧の時のCPは$CP";
+            is $CP, $pg->MAX('Grown'), "calculate CP for $name is ok";
+            ok( 1, "${\$name}は未実装のポケモンのため検算を省略します。" );
+        }else{
+            $CP = $IV->_calculate_CP( name => $name, LV => 20, ST => 15, AT => 15, DF => 15 );
+            note "孵化時の個体値完璧の時のCPは$CP";
+            is $CP, $pg->hatchedMAX(), "calculate CP for $name is ok";
+            $CP = $IV->_calculate_CP( name => $name, LV => 25, ST => 15, AT => 15, DF => 15 );
+            note "ブースト時の個体値完璧の時のCPは$CP";
+            is $CP, $pg->boostedMAX(), "calculate CP for $name is ok";
         }
     }
 };

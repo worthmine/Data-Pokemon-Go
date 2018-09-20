@@ -487,6 +487,7 @@
     Defense: 153
     isNotAvailable: 1
     MAXCP:
+        Grown: 674
         Hatched:
         Boosted:
 テッカニン:    #-------------------------------------------------------------
@@ -501,6 +502,7 @@
     Defense: 114
     isNotAvailable: 1
     MAXCP:
+        Grown: 1751
         Hatched:
         Boosted:
 ヌケニン:    #--------------------------------------------------------------
@@ -515,6 +517,7 @@
     Defense: 80
     isNotAvailable: 1
     MAXCP:
+        Grown: 421
         Hatched:
         Boosted:
 ゴニョニョ:    #-------------------------------------------------------------
@@ -1268,6 +1271,7 @@
     Defense: 212
     isNotAvailable: 1
     MAXCP:
+        Grown: 1924
         Hatched:
         Boosted:
 カゲボウズ:    #-------------------------------------------------------------
@@ -1442,6 +1446,7 @@
     Defense: 149
     isNotAvailable: 1
     MAXCP:
+        Grown: 1091
         Hatched:
         Boosted:
 ハンテール:    #-------------------------------------------------------------
@@ -1455,6 +1460,7 @@
     Defense: 194
     isNotAvailable: 1
     MAXCP:
+        Grown: 2140
         Hatched:
         Boosted:
 サクラビス:    #-------------------------------------------------------------
@@ -1468,6 +1474,7 @@
     Defense: 194
     isNotAvailable: 1
     MAXCP:
+        Grown: 2281
         Hatched:
         Boosted:
 ジーランス:    #-------------------------------------------------------------
@@ -1580,10 +1587,10 @@
     Stamina: 160
     Attack: 179
     Defense: 356
-    isNotAvailable: 1
     MAXCP:
-        Hatched:
-        Boosted:
+        Grown: 3087
+        Hatched: 1764
+        Boosted: 2205
 レジアイス:    #-------------------------------------------------------------
     ID: 378
     Types:
@@ -1683,6 +1690,7 @@
     Defense: 210
     isNotAvailable: 1
     MAXCP:
+        Grown: 3090
         Hatched:
         Boosted:
 デオキシス:    #-------------------------------------------------------------

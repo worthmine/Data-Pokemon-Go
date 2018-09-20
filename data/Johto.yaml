@@ -1092,8 +1092,9 @@
     Attack: 40
     Defense: 88
     MAXCP:
-        Hatched: 222
-        Boosted: 278
+        Grown: 389
+        Hatched:
+        Boosted:
 バルキー:   #--------------------------------------------------------------
     ID: 236
     Types:
