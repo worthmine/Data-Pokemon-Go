@@ -52,15 +52,15 @@ sub IVs {
         if ( $pg->isNotAvailable() ) {
             $CP = $IV->_calculate_CP( name => $name, LV => 40, ST => 15, AT => 15, DF => 15 );
             note "MAX成長時の個体値完璧の時のCPは$CP";
-            is $CP, $pg->MAX('Grown'), "calculate CP for $name is ok";
+            is $CP, $pg->max('Grown'), "calculate CP for $name is ok";
             ok( 1, "${\$name}は未実装のポケモンのため検算を省略します。" );
         }else{
             $CP = $IV->_calculate_CP( name => $name, LV => 20, ST => 15, AT => 15, DF => 15 );
             note "孵化時の個体値完璧の時のCPは$CP";
-            is $CP, $pg->hatchedMAX(), "calculate CP for $name is ok";
+            is $CP, $pg->max('Hatched'), "calculate CP for $name is ok";
             $CP = $IV->_calculate_CP( name => $name, LV => 25, ST => 15, AT => 15, DF => 15 );
             note "ブースト時の個体値完璧の時のCPは$CP";
-            is $CP, $pg->boostedMAX(), "calculate CP for $name is ok";
+            is $CP, $pg->max('Boosted'), "calculate CP for $name is ok";
         }
     }
 };
