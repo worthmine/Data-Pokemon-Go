@@ -1,5 +1,6 @@
 data/MeCab.csv
 data/MeCab.dic
+data/Sinnoh.yaml
 lib/Data/Pokemon/Go/Role/Pokemon.pm
 
 /.build/

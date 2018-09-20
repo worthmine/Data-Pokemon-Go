@@ -131,6 +131,9 @@ sub defense {
 sub max {
     my $self = shift;
     my $when = shift;
+     croak "Unvalid param $when into sub max()"
+    unless $when =~ /(:?Boosted|Hatched|Grown)/;
+
     my $name = $self->name();
     croak "'$when' is undefined for $name" unless exists $all->{$name}{'MAXCP'}{$when};
     return $all->{$name}{'MAXCP'}{$when};
