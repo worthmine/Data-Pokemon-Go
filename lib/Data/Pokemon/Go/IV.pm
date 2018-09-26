@@ -9,7 +9,7 @@ use Moose;
 __PACKAGE__->meta->make_immutable;
 no Moose;
 
-my $in_file = path( 'data', 'LV.yaml' );
+my $in_file = path( 'share', 'LV.yaml' );
 my $data = YAML::XS::LoadFile($in_file);
 my %Dust = ();
 push @{ $Dust{ $_->{Dust} } }, { LV => $_->{LV}, Candy => $_->{Candy} } foreach @$data;

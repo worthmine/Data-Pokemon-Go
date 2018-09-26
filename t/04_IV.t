@@ -34,7 +34,7 @@ exit;
 
 sub IVs {
     my $region = shift;
-    my $in_file = path( 'data', "$region.yaml" );
+    my $in_file = path( 'share', "$region.yaml" );
     my $data = YAML::XS::LoadFile($in_file);
     map{ $data->{$_}{'name'} = $_ } keys %$data;
     my @pokemons = map{ $_->{'name'} } sort{ $a->{'ID'} cmp $b->{'ID'} } values %$data;

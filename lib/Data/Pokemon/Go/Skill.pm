@@ -8,7 +8,7 @@ use Moose::Util::TypeConstraints;
 with 'Data::Pokemon::Go::Role::Types';
 
 use Path::Tiny;
-my $in_file = path( 'data', 'Skill.yaml' );
+my $in_file = path( 'share', 'Skill.yaml' );
 
 use YAML::XS;
 my $data = YAML::XS::LoadFile($in_file);

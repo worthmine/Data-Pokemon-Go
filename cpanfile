@@ -5,7 +5,6 @@ requires 'Moose::Util::TypeConstraints';
 requires 'Path::Tiny';
 requires 'YAML::XS';
 requires 'perl', '5.008001';
-requires 'FindBin::libs';
 
 on configure => sub {
     requires 'Module::Build::Tiny', '0.035';

@@ -21,9 +21,7 @@ no Moose::Role;
 use Path::Tiny;
 use YAML::XS;
 
-#use FindBin::libs qw( export );
-#my $relation = path( $lib[0], '..', 'data', 'Relations.yaml' );
-my $relation = path( 'data', 'Relations.yaml' );
+my $relation = path( 'share', 'Relations.yaml' );
 our $Ref_Advantage = YAML::XS::LoadFile($relation);
 our $Relations = {};
 

@@ -42,7 +42,6 @@
       },
       "runtime" : {
          "requires" : {
-            "FindBin::libs" : "0",
             "List::Util" : "0",
             "Moose" : "0",
             "Moose::Role" : "0",
