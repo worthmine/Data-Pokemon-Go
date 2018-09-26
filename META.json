@@ -42,6 +42,7 @@
       },
       "runtime" : {
          "requires" : {
+            "File::Share" : "0.25",
             "List::Util" : "0",
             "Moose" : "0",
             "Moose::Role" : "0",

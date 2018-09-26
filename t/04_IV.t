@@ -3,8 +3,9 @@ use strict;
 use warnings;
 
 use Test::More 1.302 tests => 7;
-use Path::Tiny;
 use YAML::XS;
+use File::Share 'dist_dir';
+my $dir = dist_dir('Data-Pokemon-Go');
 
 my $builder = Test::More->builder;
 binmode $builder->output,         ":utf8";
@@ -13,7 +14,6 @@ binmode $builder->todo_output,    ":utf8";
 binmode STDERR,                   ":utf8";
 
 use lib './lib';
-
 use Data::Pokemon::Go::Pokemon;
 my $pg = Data::Pokemon::Go::Pokemon->new();
 
@@ -34,8 +34,7 @@ exit;
 
 sub IVs {
     my $region = shift;
-    my $in_file = path( 'share', "$region.yaml" );
-    my $data = YAML::XS::LoadFile($in_file);
+    my $data = YAML::XS::LoadFile("$dir/$region.yaml");
     map{ $data->{$_}{'name'} = $_ } keys %$data;
     my @pokemons = map{ $_->{'name'} } sort{ $a->{'ID'} cmp $b->{'ID'} } values %$data;
     plan tests => scalar @pokemons * 2;

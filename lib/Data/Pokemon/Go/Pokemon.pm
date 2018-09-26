@@ -4,6 +4,10 @@ use Carp;
 
 use Moose;
 use Moose::Util::TypeConstraints;
+use YAML::XS;
+#use File::ShareDir::Install qw(postamble);
+use File::Share 'dist_dir';
+my $dir = dist_dir('Data-Pokemon-Go');
 
 use Data::Pokemon::Go;
 use Data::Pokemon::Go::Relation;
@@ -11,14 +15,9 @@ use Data::Pokemon::Go::Skill;
 
 my $skill = Data::Pokemon::Go::Skill->new();
 
-use YAML::XS;
-use Path::Tiny;
-use File::ShareDir::Install qw(postamble);
-
 my $all = {};
 foreach my $region (qw|Kanto Johto Hoenn Alola|){
-    my $in_file = path( 'share', "$region.yaml" );
-    my $data = YAML::XS::LoadFile($in_file);
+    my $data = YAML::XS::LoadFile("$dir/$region.yaml");
     map{ $data->{$_}{'name'} = $_ } keys %$data;
     %$all = ( %$all, %$data );
 }
