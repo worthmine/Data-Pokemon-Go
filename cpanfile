@@ -2,7 +2,6 @@ requires 'List::Util';
 requires 'Moose';
 requires 'Moose::Role';
 requires 'Moose::Util::TypeConstraints';
-requires 'Path::Tiny';
 requires 'YAML::XS';
 requires 'File::Share', '0.25';
 
