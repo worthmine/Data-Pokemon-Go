@@ -16,7 +16,7 @@ my $skill = Data::Pokemon::Go::Skill->new();
 
 my $all = {};
 our @All = ();
-foreach my $region (qw|Kanto|){#} Johto Hoenn Alola Sinnoh|){
+foreach my $region (qw|Kanto Johto|){ #Hoenn Alola Sinnoh|){
     my $data = YAML::XS::LoadFile("$dir/$region.yaml");
     map{
         $all->{ $_->{'Name'}{'ja'} } = $_;

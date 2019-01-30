@@ -75,7 +75,8 @@
    "x_authority" : "cpan:WORTHMINE",
    "x_contributors" : [
       "AnaTofuZ <anatofuz@gmail.com>",
-      "Yuki Yoshida <worthmine@users.noreply.github.com>"
+      "Yuki Yoshida <worthmine@users.noreply.github.com>",
+      "worthmine <worthmine@cpan.org>"
    ],
    "x_serialization_backend" : "JSON::PP version 4.00",
    "x_static_install" : 1
