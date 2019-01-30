@@ -4,7 +4,7 @@
       "Yuki Yoshida <worthmine@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v3.1.2, CPAN::Meta::Converter version 2.150010",
+   "generated_by" : "Minilla/v3.1.4, CPAN::Meta::Converter version 2.150010",
    "license" : [
       "perl_5"
    ],
@@ -54,6 +54,7 @@
       "test" : {
          "requires" : {
             "Test::More" : "1.302",
+            "Test::More::UTF8" : "0.05",
             "Text::CSV_XS" : "1.34"
          }
       }
@@ -76,6 +77,6 @@
       "AnaTofuZ <anatofuz@gmail.com>",
       "Yuki Yoshida <worthmine@users.noreply.github.com>"
    ],
-   "x_serialization_backend" : "JSON::PP version 2.97001",
+   "x_serialization_backend" : "JSON::PP version 4.00",
    "x_static_install" : 1
 }
