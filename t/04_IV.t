@@ -19,9 +19,9 @@ my $IV = new_ok 'Data::Pokemon::Go::IV';                                # 2
 
 subtest 'Kanto'     => sub{ IVs('Kanto') };                             # 3
 subtest 'Johto'     => sub{ IVs('Johto') };                             # 4
-#subtest 'Hoenn'     => sub{ IVs('Hoenn') };                             # 5
-#subtest 'Alola'     => sub{ IVs('Alola') };                             # 6
-#subtest 'Sinnoh'    => sub{ IVs('Sinnoh') };                            # 7
+subtest 'Hoenn'     => sub{ IVs('Hoenn') };                             # 5
+subtest 'Alola'     => sub{ IVs('Alola') };                             # 6
+subtest 'Sinnoh'    => sub{ IVs('Sinnoh') };                            # 7
 
 done_testing();
 
@@ -30,8 +30,7 @@ exit;
 sub IVs {
     my $region = shift;
     my $data = YAML::XS::LoadFile("$dir/$region.yaml");
-#    map{ $_->{'Name'}{'ja'} = $_ } @$data;
-my @pokemons = map{ $_->{'Name'}{'ja'} } @$data;
+    my @pokemons = map{ $_->{'Name'}{'ja'} } @$data;
     plan tests => scalar @pokemons * 2;
     foreach my $name (@pokemons) {
         next unless $pg->exists($name);
