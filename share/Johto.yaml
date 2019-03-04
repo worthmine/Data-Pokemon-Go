@@ -17,7 +17,7 @@
 - # ベイリーフ(153) ------------------------------------------------------
     ID: 153
     Name:
-        ja: ベイリーフ ベイリーフ
+        ja: ベイリーフ 
         en: Bayleef
     Types:
         - くさ
@@ -1339,14 +1339,13 @@
         - ノーマル
     From:
     To:
-    isNotAvailable: 1
-    Stamina: 110
+    Stamina: 146
     Attack: 40
-    Defense: 88
+    Defense: 83
     MAXCP:
-        Grown: 389
-        Hatched:
-        Boosted:
+        Grown: 431
+        Hatched: 246
+        Boosted: 308
 - # バルキー(236) ------------------------------------------------------
     ID: 236
     Name:

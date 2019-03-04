@@ -417,3 +417,46 @@
     MAXCP:
         Hatched: 966
         Boosted: 1208
+- # メルタン(808) ---------------------------------------------------------------
+    ID: 808
+    Name:
+        ja: メルタン
+        en: Meltan
+    Types:
+        - はがね
+    Skill:
+        - でんきショック
+    Special:
+        - ラスターカノン
+        - 10まんボルト
+    From:
+    To:
+        - メルメタル
+    Stamina: 130
+    Attack: 118
+    Defense: 99
+    MAXCP:
+        Hatched: 610
+        Boosted: 762
+- # メルメタル(809) ---------------------------------------------------------------
+    ID: 809
+    Name:
+        ja: メルメタル
+        en: Melmetal
+    Types:
+        - はがね
+    Skill:
+        - でんきショック
+    Special:
+        - ラスターカノン
+        - はかいこうせん
+        - いわなだれ
+        - 10まんボルト
+    From: メルタン
+    To:
+    Stamina: 264
+    Attack: 226
+    Defense: 190
+    MAXCP:
+        Hatched: 2056
+        Boosted: 2571
