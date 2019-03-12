@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/worthmine/Data-Pokemon-Go.svg?branch=master)](https://travis-ci.org/worthmine/Data-Pokemon-Go)
 # NAME
 
-Data::Pokemon::Go - Datas for every Pokemon in Pokemon Go
+Data::Pokemon::Go - Data for every Pokemon in Pokemon Go
 
 # SYNOPSIS
 
