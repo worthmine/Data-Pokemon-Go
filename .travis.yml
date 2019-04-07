@@ -3,11 +3,9 @@ language: perl
 #sudo: false
 
 before_install:
-  - curl https://gist.githubusercontent.com/dtan4/351d031bec0c3d45cd8f/raw/mecab_install.sh | bash
-#- 'sudo apt install libmecab-perl'
-#- 'sudo apt install mecab'
-#- 'sudo apt install libmecab-dev'
-#- 'sudo apt install mecab-ipadic-utf8'
+- curl https://gist.githubusercontent.com/dtan4/351d031bec0c3d45cd8f/raw/mecab_install.sh | bash
+
+after_success: .travis/share/MeCab.sh
 
 perl:
 - '5.8'
