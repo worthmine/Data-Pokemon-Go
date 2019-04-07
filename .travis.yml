@@ -1,11 +1,10 @@
 language: perl
-
 sudo: false
 
-before_install:
-- curl https://gist.githubusercontent.com/dtan4/351d031bec0c3d45cd8f/raw/mecab_install.sh | bash
+#before_install:
+#- curl https://gist.githubusercontent.com/dtan4/351d031bec0c3d45cd8f/raw/mecab_install.sh | bash
 
-after_success: share/MeCab.sh
+  #after_success: share/MeCab.sh
 
 perl:
 - '5.8'
