@@ -1,5 +1,5 @@
 use strict;
-use Test::More 0.98 tests => 2;
+use Test::More 0.98 tests => 1;
 use Test::More::UTF8;
 
 use File::Share 'dist_dir';
