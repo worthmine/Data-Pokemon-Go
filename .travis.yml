@@ -3,9 +3,10 @@ language: perl
 #sudo: false
 
 before_install:
-- 'sudo apt install mecab'
-- 'sudo apt install libmecab-dev'
-- 'sudo apt install mecab-ipadic-utf8'
+- 'sudo apt install libmecab-perl'
+#- 'sudo apt install mecab'
+#- 'sudo apt install libmecab-dev'
+#- 'sudo apt install mecab-ipadic-utf8'
 
 perl:
 - '5.8'
