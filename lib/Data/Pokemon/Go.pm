@@ -5,6 +5,8 @@ use warnings;
 
 our $VERSION = "0.08";
 
+use Moose;
+
 1;
 __END__
 
