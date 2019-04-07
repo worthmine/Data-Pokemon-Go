@@ -1,6 +1,6 @@
 language: perl
 
-#sudo: false
+sudo: false
 
 before_install:
 - curl https://gist.githubusercontent.com/dtan4/351d031bec0c3d45cd8f/raw/mecab_install.sh | bash
