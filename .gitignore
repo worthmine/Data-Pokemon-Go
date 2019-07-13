@@ -1,6 +1,7 @@
 share/MeCab.csv
 share/MeCab.dic
 lib/Data/Pokemon/Go/Role/Pokemon.pm
+.DS_Store
 
 /.build/
 /_build/
