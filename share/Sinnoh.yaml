@@ -596,18 +596,16 @@
     Name:
         ja: チェリンボ
         en:
-    isNotAvailable: 1
     Types:
-    - くさ
+        - くさ
     From:
     To:
-    Stamina: 90
+    Stamina: 128
     Attack: 108
-    Defense: 96
+    Defense: 92
     MAXCP:
-        Grown: 829
-        Hatched:
-        Boosted:
+        Hatched: 542
+        Boosted: 678
 - # チェリム(421) --------------------------------------------------
     ID: 421
     Name:
