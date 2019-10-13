@@ -18,6 +18,7 @@ Data::Pokemon::Go - Data for every Pokemon in Pokemon Go
 
 =head1 SYNOPSIS
 
+ use utf8;
  use Data::Pokemon::Go::Pokemon;
  my $pg = Data::Pokemon::Go::Pokemon->new( name => 'カイリュー' );
  print $pg->effective();    # こおり ドラゴン いわ フェアリー
@@ -43,7 +44,7 @@ Data::Pokemon::Go is the helper module for who has less knowledge about Pokemons
 
 =item supporting Multi-language is not available
 
-=item YAMLs for after Sinnoh Region are not available
+=item YAML for Unova Region are not available
 
 =item Japanese documents are not available L<qiitaで日本語解説を少しだけ|https://qiita.com/worthmine/items/4a51fd74f31b4a97cf3c>
 

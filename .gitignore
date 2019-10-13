@@ -34,3 +34,6 @@ cover_db/
 MYMETA.*
 
 /Data-Pokemon-Go-*
+/.build
+!Build/
+!META.json

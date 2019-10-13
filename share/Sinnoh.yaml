@@ -397,7 +397,6 @@
     Attack: 76
     Defense: 195
     MAXCP:
-        Grown: 890
         Hatched: 509
         Boosted: 636
 - # トリデプス(411) --------------------------------------------------
@@ -414,101 +413,123 @@
     Attack: 94
     Defense: 286
     MAXCP:
-        Grown: 1539
         Hatched: 879
         Boosted: 1100
-- # ミノムッチ(412) --------------------------------------------------
+- # ミノムッチ(くさきのミノ)(412) --------------------------------------------------
     ID: 412
     Name:
         ja: ミノムッチ
         en:
-    isNotAvailable: 1
+    Form: くさきのミノ
     Types:
         - むし
-    From:
-    To:
-    Stamina: 80
-    Attack: 53
-    Defense: 83
-    MAXCP:
-        Grown: 409
-        Hatched:
-        Boosted:
-- # ミノマダム(413) --------------------------------------------------
-    ID: 413
-    Name:
-        ja: ミノマダム
-        en:
-    isNotAvailable: 1
-    Form: ゴミのミノ
-    Types:
-        - むし
-        - はがね
     From:
     To:
     Stamina: 120
-    Attack: 127
-    Defense: 175
+    Attack: 53
+    Defense: 83
     MAXCP:
-        Grown: 1420
-        Hatched:
-        Boosted:
+        Hatched: 279
+        Boosted: 348
+- # ミノムッチ(すなちのミノ)(412) --------------------------------------------------
+    ID: 412
+    Name:
+        ja: ミノムッチ
+        en:
+    Form: すなちのミノ
+    Types:
+        - むし
+    From:
+    To:
+    Stamina: 120
+    Attack: 53
+    Defense: 83
+    MAXCP:
+        Hatched: 279
+        Boosted: 348
+- # ミノムッチ(ゴミのミノ)(412) --------------------------------------------------
+    ID: 412
+    Name:
+        ja: ミノムッチ
+        en:
+    Form: ゴミのミノ
+    Types:
+        - むし
+    From:
+    To:
+    Stamina: 120
+    Attack: 53
+    Defense: 83
+    MAXCP:
+        Hatched: 279
+        Boosted: 348
 - # ミノマダム(413) --------------------------------------------------
     ID: 413
     Name:
         ja: ミノマダム
         en:
-    isNotAvailable: 1
     Form: くさきのミノ
     Types:
         - むし
         - くさ
     From:
     To:
-    Stamina: 120
+    Stamina: 155
     Attack: 141
-    Defense: 189
+    Defense: 180
     MAXCP:
-        Grown: 1616
-        Hatched:
-        Boosted:
+        Hatched: 1013
+        Boosted: 1267
 - # ミノマダム(413) --------------------------------------------------
     ID: 413
     Name:
         ja: ミノマダム
         en:
-    isNotAvailable: 1
     Form: すなちのミノ
     Types:
         - むし
         - じめん
     From:
     To:
-    Stamina: 120
+    Stamina: 155
     Attack: 141
-    Defense: 189
+    Defense: 180
     MAXCP:
-        Grown: 1616
-        Hatched:
-        Boosted:
+        Hatched: 1013
+        Boosted: 1267
+- # ミノマダム(413) --------------------------------------------------
+    ID: 413
+    Name:
+        ja: ミノマダム
+        en:
+    Form: ゴミのミノ
+    Types:
+        - むし
+        - はがね
+    From:
+    To:
+    Stamina: 155
+    Attack: 127
+    Defense: 175
+    MAXCP:
+        Hatched: 910
+        Boosted: 1138
 - # ガーメイル(414) --------------------------------------------------
     ID: 414
     Name:
         ja: ガーメイル
         en:
-    isNotAvailable: 1
     Types:
         - むし
         - ひこう
     From:
     To:
-    Stamina: 140
+    Stamina: 172
     Attack: 185
     Defense: 98
     MAXCP:
-        Grown: 1653
-        Hatched:
-        Boosted:
+        Hatched: 1037
+        Boosted: 1297
 - # ミツハニー(415) --------------------------------------------------
     ID: 415
     Name:
@@ -611,92 +632,99 @@
     Name:
         ja: チェリム
         en:
-    isNotAvailable: 1
     Form: ネガフォルム
     Types:
         - くさ
     From:
     To:
-    Stamina: 140
+    Stamina: 172
     Attack: 170
-    Defense: 157
+    Defense: 153
     MAXCP:
-        Grown: 1886
-        Hatched:
-        Boosted:
+        Hatched: 1170
+        Boosted: 1462
 - # チェリム(421) --------------------------------------------------
     ID: 421
     Name:
         ja: チェリム
         en:
-    isNotAvailable: 1
     Form: ポジフォルム
     Types:
         - くさ
     From:
     To:
-    Stamina: 140
+    Stamina: 172
     Attack: 170
-    Defense: 157
+    Defense: 153
     MAXCP:
-        Grown: 1886
-        Hatched:
-        Boosted:
-- # カラナクシ(422) --------------------------------------------------
+        Hatched: 1170
+        Boosted: 1462
+- # カラナクシ(にしのうみ)(422) --------------------------------------------------
     ID: 422
     Name:
         ja: カラナクシ
         en:
-    isNotAvailable: 1
+    Form: にしのうみ
     Types:
         - みず
     From:
     To:
-    Stamina: 152
+    Stamina: 183
     Attack: 103
-    Defense: 111
+    Defense: 105
     MAXCP:
-        Grown: 1069
-        Hatched:
-        Boosted:
+        Hatched: 649
+        Boosted: 811
+- # カラナクシ(ひがしのうみ)(422) --------------------------------------------------
+    ID: 422
+    Name:
+        ja: カラナクシ
+        en:
+    Form: ひがしのうみ
+    Types:
+        - みず
+    From:
+    To:
+    Stamina: 183
+    Attack: 103
+    Defense: 105
+    MAXCP:
+        Hatched: 649
+        Boosted: 811
 - # トリトドン(423) --------------------------------------------------
     ID: 423
     Name:
         ja: トリトドン
         en:
-    isNotAvailable: 1
     Form: にしのうみ
     Types:
         - みず
         - じめん
     From:
     To:
-    Stamina: 222
+    Stamina: 244
     Attack: 169
-    Defense: 149
+    Defense: 143
     MAXCP:
-        Grown: 2265
-        Hatched:
-        Boosted:
+        Hatched: 1328
+        Boosted: 1660
 - # トリトドン(423) --------------------------------------------------
     ID: 423
     Name:
         ja: トリトドン
         en:
-    isNotAvailable: 1
     Form: ひがしのうみ
     Types:
         - みず
         - じめん
     From:
     To:
-    Stamina: 222
+    Stamina: 244
     Attack: 169
-    Defense: 149
+    Defense: 143
     MAXCP:
-        Grown: 2265
-        Hatched:
-        Boosted:
+        Hatched: 1328
+        Boosted: 1660
 - # エテボース(424) --------------------------------------------------
     ID: 424
     Name:
@@ -954,7 +982,6 @@
     Name:
         ja: マネネ
         en:
-    isNotAvailable: 1
     isNotWild: 1
     Types:
         - エスパー
@@ -962,13 +989,12 @@
     From:
     To:
         - バリヤード
-    Stamina: 40
+    Stamina: 85
     Attack: 125
-    Defense: 164
+    Defense: 142
     MAXCP:
-        Grown: 867
-        Hatched:
-        Boosted:
+        Hatched: 626
+        Boosted: 782
 - # ピンプク(440) --------------------------------------------------
     ID: 440
     Name:
@@ -1026,55 +1052,49 @@
     Name:
         ja: フカマル
         en:
-    isNotAvailable: 1
     Types:
         - ドラゴン
         - じめん
     From:
     To:
-    Stamina: 116
+    Stamina: 151
     Attack: 124
     Defense: 84
     MAXCP:
-        Grown: 988
-        Hatched:
-        Boosted:
+        Hatched: 635
+        Boosted: 794
 - # ガバイド(444) --------------------------------------------------
     ID: 444
     Name:
         ja: ガバイド
         en:
-    isNotAvailable: 1
     Types:
         - ドラゴン
         - じめん
     From:
     To:
-    Stamina: 136
+    Stamina: 169
     Attack: 172
-    Defense: 130
+    Defense: 125
     MAXCP:
-        Grown: 1728
-        Hatched:
-        Boosted:
+        Hatched: 1071
+        Boosted: 1339
 - # ガブリアス(445) --------------------------------------------------
     ID: 445
     Name:
         ja: ガブリアス
         en:
-    isNotAvailable: 1
     Types:
         - ドラゴン
         - じめん
     From:
     To:
-    Stamina: 216
+    Stamina: 239
     Attack: 261
-    Defense: 198
+    Defense: 193
     MAXCP:
-        Grown: 3823
-        Hatched:
-        Boosted:
+        Hatched: 2264
+        Boosted: 2830
 - # ゴンベ(446) --------------------------------------------------
     ID: 446
     Name:
@@ -1132,35 +1152,31 @@
     Name:
         ja: ヒポポタス
         en:
-    isNotAvailable: 1
     Types:
         - じめん
     From:
     To:
-    Stamina: 136
+    Stamina: 169
     Attack: 124
-    Defense: 134
+    Defense: 118
     MAXCP:
-        Grown: 1302
-        Hatched:
-        Boosted:
+        Hatched: 776
+        Boosted: 970
 - # カバルドン(450) --------------------------------------------------
     ID: 450
     Name:
         ja: カバルドン
         en:
-    isNotAvailable: 1
     Types:
         - じめん
     From:
     To:
-    Stamina: 216
+    Stamina: 239
     Attack: 201
-    Defense: 212
+    Defense: 191
     MAXCP:
-        Grown: 3089
-        Hatched:
-        Boosted:
+        Hatched: 1763
+        Boosted: 2204
 - # スコルピ(451) --------------------------------------------------
     ID: 451
     Name:
@@ -1344,7 +1360,6 @@
     Attack: 243
     Defense: 171
     MAXCP:
-        Grown: 3005
         Hatched: 1717
         Boosted: 2146
 - # ジバコイル(462) --------------------------------------------------
@@ -1352,20 +1367,18 @@
     Name:
         ja: ジバコイル
         en:
-    isNotAvailable: 1
     isNotWild: 1
     Types:
         - でんき
         - はがね
     From: レアコイル
     To:
-    Stamina: 140
+    Stamina: 172
     Attack: 238
-    Defense: 217
+    Defense: 205
     MAXCP:
-        Grown: 2996
-        Hatched:
-        Boosted:
+        Hatched: 1831
+        Boosted: 2289
 - # ベロベルト(463) --------------------------------------------------
     ID: 463
     Name:
@@ -1492,37 +1505,33 @@
     Name:
         ja: リーフィア
         en:
-    isNotAvailable: 1
     isNotWild: 1
     Types:
         - くさ
     From: イーブイ
     To:
-    Stamina: 130
+    Stamina: 163
     Attack: 216
-    Defense: 254
+    Defense: 219
     MAXCP:
-        Grown: 2849
-        Hatched:
-        Boosted:
+        Hatched: 1682
+        Boosted: 2103
 - # グレイシア(471) --------------------------------------------------
     ID: 471
     Name:
         ja: グレイシア
         en:
-    isNotAvailable: 1
     isNotWild: 1
     Types:
         - こおり
     From: イーブイ
     To:
-    Stamina: 130
+    Stamina: 163
     Attack: 238
-    Defense: 212
+    Defense: 205
     MAXCP:
-        Grown: 2866
-        Hatched:
-        Boosted:
+        Hatched: 1786
+        Boosted: 2233
 - # グライオン(472) --------------------------------------------------
     ID: 472
     Name:
@@ -1599,20 +1608,18 @@
     Name:
         ja: ダイノーズ
         en:
-    isNotAvailable: 1
     isNotWild: 1
     Types:
         - いわ
         - はがね
     From:
     To:
-    Stamina: 120
+    Stamina: 155
     Attack: 135
-    Defense: 278
+    Defense: 275
     MAXCP:
-        Grown: 1863
-        Hatched:
-        Boosted:
+        Hatched: 1188
+        Boosted: 1485
 - # ヨノワール(477) --------------------------------------------------
     ID: 477
     Name:
@@ -1648,10 +1655,10 @@
         Grown: 2040
         Hatched: 1166
         Boosted: 1457
-- # ウォッシュロトム(479) ----------------------------------------------
+- # ロトム(479) ----------------------------------------------
     ID: 479
     Name:
-        ja: ウォッシュロトム
+        ja: ロトム
         en:
     isNotAvailable: 1
     Types:
@@ -1671,52 +1678,46 @@
     Name:
         ja: ユクシー
         en:
-    isNotAvailable: 1
     Types:
         - エスパー
     From:
     To:
-    Stamina: 150
+    Stamina: 181
     Attack: 156
     Defense: 270
     MAXCP:
-        Grown: 2316
-        Hatched:
-        Boosted:
+        Hatched: 1442
+        Boosted: 1803
 - # エムリット(481) --------------------------------------------------
     ID: 481
     Name:
         ja: エムリット
         en:
-    isNotAvailable: 1
     Types:
         - エスパー
     From:
     To:
-    Stamina: 160
+    Stamina: 190
     Attack: 212
     Defense: 212
     MAXCP:
-        Grown: 2825
-        Hatched:
-        Boosted:
+        Hatched: 1747
+        Boosted: 2184
 - # アグノム(482) --------------------------------------------------
     ID: 482
     Name:
         ja: アグノム
         en:
-    isNotAvailable: 1
     Types:
         - エスパー
     From:
     To:
-    Stamina: 150
+    Stamina: 181
     Attack: 270
     Defense: 151
     MAXCP:
-        Grown: 2945
-        Hatched:
-        Boosted:
+        Hatched: 1834
+        Boosted: 2293
 - # ディアルガ(483) --------------------------------------------------
     ID: 483
     Name:
@@ -1785,7 +1786,7 @@
         Grown: 4955
         Hatched:
         Boosted:
-- # ギラティナ(487)アナザーフォルム -------------------------------------
+- # ギラティナ(アナザーフォルム)(487) -------------------------------------
     ID: 487
     Name:
         ja: ギラティナ
@@ -1800,28 +1801,25 @@
     Attack: 187
     Defense: 225
     MAXCP:
-        Grown: 3379
         Hatched: 1931
         Boosted: 2414
-- # ギラティナ(487)オリジンフォルム -------------------------------------
+- # ギラティナ(オリジンフォルム)(487) -------------------------------------
     ID: 487
     Name:
         ja: ギラティナ
         en:
     Form: オリジンフォルム
-    isNotAvailable: 1
     Types:
         - ゴースト
         - ドラゴン
     From:
     To:
-    Stamina: 300
-    Attack: 247
-    Defense: 206
+    Stamina: 284
+    Attack: 225
+    Defense: 187
     MAXCP:
-        Grown: 4317
-        Hatched:
-        Boosted:
+        Hatched: 2105
+        Boosted: 2631
 - # クレセリア(488) --------------------------------------------------
     ID: 488
     Name:

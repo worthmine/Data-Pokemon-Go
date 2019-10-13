@@ -19,8 +19,9 @@ our @All = ();
 foreach my $region (qw|Kanto Johto Hoenn Alola Sinnoh|){
     my $data = YAML::XS::LoadFile("$dir/$region.yaml");
     map{
-        $all->{ $_->{'Name'}{'ja'} } = $_;
-        push @All, $_->{'Name'}{'ja'};
+        my $fullname = _get_fullname($_);
+        $all->{ $fullname } = $_;
+        push @All, $fullname;
     } @$data;
 }
 
@@ -157,6 +158,18 @@ sub isAlola {
     my $self = shift;
     my $name = $self->name();
     return $all->{$name}{'isAlola'};
+}
+
+sub hasForms {
+    my $self = shift;
+    return exists $all->{'Form'};
+}
+
+sub _get_fullname {
+    my $ref = shift;
+    my $fullname = $ref->{'Name'}{'ja'};
+    $fullname .= "($ref->{'Form'})" if exists $ref->{'Form'};
+    return $fullname;
 }
 
 1;

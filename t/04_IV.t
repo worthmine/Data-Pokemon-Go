@@ -30,7 +30,7 @@ exit;
 sub IVs {
     my $region = shift;
     my $data = YAML::XS::LoadFile("$dir/$region.yaml");
-    my @pokemons = map{ $_->{'Name'}{'ja'} } @$data;
+    my @pokemons = map{ Data::Pokemon::Go::Pokemon::_get_fullname($_) } @$data;
     plan tests => scalar @pokemons * 2;
     foreach my $name (@pokemons) {
         next unless $pg->exists($name);
