@@ -36,7 +36,7 @@ sub IVs {
         next unless $pg->exists($name);
         $pg->name($name);
         my $id = $pg->id;
-        note $pg->name . "($id)は" . join( '／', @{$pg->types()} ) . "タイプ";
+        note $pg->name . "[$id]は" . join( '／', @{$pg->types()} ) . "タイプ";
         note '種族値は';
         note 'HPが' . $pg->stamina();
         note '攻撃が' . $pg->attack();
