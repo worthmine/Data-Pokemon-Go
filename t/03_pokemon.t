@@ -7,12 +7,16 @@ use Test::More::UTF8;
 
 use lib './lib';
 
-use_ok 'Data::Pokemon::Go::Pokemon';                                    # 1
+BEGIN{
+    use_ok( 'Data::Pokemon::Go::Pokemon', qw( @All @Types ) );          # 1
+}
 my $pg = new_ok 'Data::Pokemon::Go::Pokemon';                           # 2
+my @list = @Data::Pokemon::Go::Pokemon::All;
+my @types = @Data::Pokemon::Go::Pokemon::Types;
 
 subtest 'Recommend' => sub {                                            # 3
-    plan tests => scalar @Data::Pokemon::Go::Pokemon::All;
-    foreach my $name (@Data::Pokemon::Go::Pokemon::All) {
+    plan tests => scalar @list;
+    foreach my $name (@list) {
         next unless $pg->exists($name);
         $pg->name($name);
         my $id = $pg->id;
@@ -25,7 +29,7 @@ subtest 'Recommend' => sub {                                            # 3
 
         my $count = 0;
         foreach my $type ( $pg->recommended() ){
-            $count += grep{ $_ eq $type } @Data::Pokemon::Go::Role::Types::All;
+            $count += grep{ $_ eq $type } @types;
         }
 
         is $count > 0, 1, "recommended types for $name is ok";

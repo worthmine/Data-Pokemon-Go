@@ -8,8 +8,8 @@ use YAML::XS;
 use File::Share 'dist_dir';
 my $dir = dist_dir('Data-Pokemon-Go');
 
-use Data::Pokemon::Go;
 use Data::Pokemon::Go::Relation;
+our @Types = @Data::Pokemon::Go::Role::Types::All;
 use Data::Pokemon::Go::Skill;
 
 my $skill = Data::Pokemon::Go::Skill->new();
