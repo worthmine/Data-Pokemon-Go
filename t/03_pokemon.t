@@ -20,7 +20,7 @@ subtest 'Recommend' => sub {                                            # 3
         next unless $pg->exists($name);
         $pg->name($name);
         my $id = $pg->id;
-        note $pg->name . "[$id]は" . join( '／', @{$pg->types()} ) . "タイプ";
+        note $name . "[$id]は" . join( '／', @{$pg->types()} ) . "タイプ";
         note 'こうかばつぐんは ', join ',', $pg->effective();
         note 'いまひとつは ', join ',', $pg->invalid();
         note '有利なタイプは ', join ',', $pg->advantage();
