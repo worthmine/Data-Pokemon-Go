@@ -18,7 +18,7 @@ my $skill = Data::Pokemon::Go::Skill->new();
 
 our $All = {};
 our @All = ();
-foreach my $region (qw|Kanto Johto Hoenn Alola Sinnoh|){
+foreach my $region (qw|Kanto Johto Hoenn Sinnoh Alola|){
     my $data = YAML::XS::LoadFile("$dir/$region.yaml");
     map{
         my $fullname = _get_fullname( $_, 'ja' );

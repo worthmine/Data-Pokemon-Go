@@ -20,8 +20,8 @@ my $IV = new_ok 'Data::Pokemon::Go::IV';                                # 2
 subtest 'Kanto'     => sub{ IVs('Kanto') };                             # 3
 subtest 'Johto'     => sub{ IVs('Johto') };                             # 4
 subtest 'Hoenn'     => sub{ IVs('Hoenn') };                             # 5
-subtest 'Alola'     => sub{ IVs('Alola') };                             # 6
 subtest 'Sinnoh'    => sub{ IVs('Sinnoh') };                            # 7
+subtest 'Alola'     => sub{ IVs('Alola') };                             # 6
 
 done_testing();
 
