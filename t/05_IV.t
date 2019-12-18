@@ -30,13 +30,12 @@ exit;
 sub IVs {
     my $region = shift;
     my $data = YAML::XS::LoadFile("$dir/$region.yaml");
-    my @pokemons = map{ Data::Pokemon::Go::Pokemon::_get_fullname($_) } @$data;
+    my @pokemons = map{ Data::Pokemon::Go::Pokemon::_get_fullname( $_, 'ja' ) } @$data;
     plan tests => scalar @pokemons * 2;
     foreach my $name (@pokemons) {
         next unless $pg->exists($name);
         $pg->name($name);
-        my $id = $pg->id;
-        note $pg->name . "[$id]は" . join( '／', @{$pg->types()} ) . "タイプ";
+        note $pg->name . "は" . join( '／', @{$pg->types()} ) . "タイプ";
         note '種族値は';
         note 'HPが' . $pg->stamina();
         note '攻撃が' . $pg->attack();
