@@ -8,10 +8,10 @@ use Test::More::UTF8;
 use lib './lib';
 
 BEGIN{
-    use_ok( 'Data::Pokemon::Go::Pokemon', qw( @All @Types ) );          # 1
+    use_ok( 'Data::Pokemon::Go::Pokemon', qw( @List @Types ) );          # 1
 }
 my $pg = new_ok 'Data::Pokemon::Go::Pokemon';                           # 2
-my @list = @Data::Pokemon::Go::Pokemon::All;
+my @list = @Data::Pokemon::Go::Pokemon::List;
 my @types = @Data::Pokemon::Go::Pokemon::Types;
 
 subtest 'Recommend' => sub {                                            # 3

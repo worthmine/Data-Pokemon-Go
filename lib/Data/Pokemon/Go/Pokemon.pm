@@ -2,7 +2,7 @@ package Data::Pokemon::Go::Pokemon;
 use 5.008001;
 use Carp;
 use Exporter 'import';
-our @EXPORT_OK = qw( $All @All @Types );
+our @EXPORT_OK = qw( $All @List @Types );
 
 use Moose;
 use Moose::Util::TypeConstraints;
@@ -17,17 +17,17 @@ use Data::Pokemon::Go::Skill;
 my $skill = Data::Pokemon::Go::Skill->new();
 
 our $All = {};
-our @All = ();
+our @List = ();
 foreach my $region (qw|Kanto Johto Hoenn Sinnoh Alola|){
     my $data = YAML::XS::LoadFile("$dir/$region.yaml");
     map{
         my $fullname = _get_fullname( $_, 'ja' );
         $All->{ $fullname } = $_;
-        push @All, $fullname;
+        push @List, $fullname;
     } @$data;
 }
 
-enum 'PokemonName' => \@All;
+enum 'PokemonName' => \@List;
 has name => ( is => 'rw', isa => 'PokemonName' );
 
 before 'name' => sub {
