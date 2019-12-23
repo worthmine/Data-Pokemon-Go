@@ -171,7 +171,7 @@ sub isAlola {
 sub hasForms {
     my $self = shift;
     my $name = $self->name();
-    return exists $All->{$name}{'Form'}? $All->{$name}{'Form'} : undef;
+    return exists $All->{$name}{'Form'}? $All->{$name}{'Form'} : 0;
 }
 
 sub _get_fullname {
@@ -186,7 +186,7 @@ sub _get_fullname {
 sub get_Pokemon_name {
     my $self = shift;
     my $ref = shift;
-    my $lang = shift || '';
+    my $lang = shift || 'jp';
     croak "No name for $lang" unless exists $ref->{'Name'}{$lang};
     return $ref->{'Name'}{$lang};
 }

@@ -3,6 +3,7 @@
     Name:
         ja: コラッタ
         en: Rattata
+    Form: アローラのすがた
     Types:
     - あく
     - ノーマル
@@ -27,6 +28,7 @@
     Name:
         ja: ラッタ
         en: Raticate
+    Form: アローラのすがた
     Types:
         - あく
         - ノーマル
@@ -50,6 +52,7 @@
     Name:
         ja: ライチュウ
         en: Raichu
+    Form: アローラのすがた
     Types:
         - でんき
         - エスパー
@@ -73,6 +76,7 @@
     Name:
         ja: サンド
         en: Sandshrew
+    Form: アローラのすがた
     Types:
         - こおり
         - はがね
@@ -97,6 +101,7 @@
     Name:
         ja: サンドパン
         en: Sandslash
+    Form: アローラのすがた
     Types:
         - こおり
         - はがね
@@ -120,6 +125,7 @@
     Name:
         ja: ロコン
         en: Vulpix
+    Form: アローラのすがた
     Types:
         - こおり
     Skill:
@@ -143,6 +149,7 @@
     Name:
         ja: キュウコン
         en: Ninetales
+    Form: アローラのすがた
     Types:
         - こおり
         - フェアリー
@@ -166,6 +173,7 @@
     Name:
         ja: ディグダ
         en: Diglett
+    Form: アローラのすがた
     Types:
         - じめん
         - はがね
@@ -190,6 +198,7 @@
     Name:
         ja: ダグトリオ
         en: Dugtrio
+    Form: アローラのすがた
     Types:
         - じめん
         - はがね
@@ -213,6 +222,7 @@
     Name:
         ja: ニャース
         en: Meowth
+    Form: アローラのすがた
     Types:
         - あく
     Skill:
@@ -236,6 +246,7 @@
     Name:
         ja: ペルシアン
         en: Persian
+    Form: アローラのすがた
     Types:
         - あく
     Skill:
@@ -258,6 +269,7 @@
     Name:
         ja: イシツブテ
         en: Geodude
+    Form: アローラのすがた
     Types:
         - いわ
         - でんき
@@ -282,6 +294,7 @@
     Name:
         ja: ゴローン
         en: Graveler
+    Form: アローラのすがた
     Types:
         - いわ
         - でんき
@@ -306,6 +319,7 @@
     Name:
         ja: ゴローニャ
         en: Golem
+    Form: アローラのすがた
     Types:
         - いわ
         - でんき
@@ -329,6 +343,7 @@
     Name:
         ja: ベトベター
         en: Grimer
+    Form: アローラのすがた
     Types:
         - どく
         - あく
@@ -353,6 +368,7 @@
     Name:
         ja: ベトベトン
         en: Muk
+    Form: アローラのすがた
     Types:
         - どく
         - あく
@@ -376,6 +392,7 @@
     Name:
         ja: ナッシー
         en: Exeggutor
+    Form: アローラのすがた
     Types:
         - くさ
         - ドラゴン
@@ -399,6 +416,7 @@
     Name:
         ja: ガラガラ
         en: Marowak
+    Form: アローラのすがた
     Types:
         - ほのお
         - ゴースト
