@@ -1,7 +1,10 @@
+json2yaml.pl
 share/MeCab.csv
 share/MeCab.dic
+share/Latest.yaml
 lib/Data/Pokemon/Go/Role/Pokemon.pm
 .DS_Store
+pokemon.json/
 
 /.build/
 /_build/

@@ -1546,13 +1546,62 @@
     MAXCP:
         Hatched: 1717
         Boosted: 2147
-- # ポワルン[351] --------------------------------------------------
+- # ポワルン(ポワルンのすがた)[351] --------------------------------------------------
     ID: 351
     Name:
         ja: ポワルン
         en: Castform
-    Types: # ToDo: フォルムによって種族値は変化しないが、タイプは変わる
+    Form: ポワルンのすがた
+    Types:
         - ノーマル
+    From:
+    To:
+    Stamina: 172
+    Attack: 139
+    Defense: 139
+    MAXCP:
+        Hatched: 932
+        Boosted: 1165
+- # ポワルン(あまぐものすがた)[351] --------------------------------------------------
+    ID: 351
+    Name:
+        ja: ポワルン
+        en: Castform
+    Form: あまぐものすがた
+    Types:
+        - みず
+    From:
+    To:
+    Stamina: 172
+    Attack: 139
+    Defense: 139
+    MAXCP:
+        Hatched: 932
+        Boosted: 1165
+- # ポワルン(ゆきぐものすがた)[351] --------------------------------------------------
+    ID: 351
+    Name:
+        ja: ポワルン
+        en: Castform
+    Form: ゆきぐものすがた
+    Types:
+        - こおり
+    From:
+    To:
+    Stamina: 172
+    Attack: 139
+    Defense: 139
+    MAXCP:
+        Hatched: 932
+        Boosted: 1165
+- # ポワルン(たいようのすがた)[351] --------------------------------------------------
+    ID: 351
+    Name:
+        ja: ポワルン
+        en: Castform
+    Form: たいようのすがた
+    Types:
+    - ほのお
     From:
     To:
     Stamina: 172

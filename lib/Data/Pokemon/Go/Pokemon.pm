@@ -8,7 +8,7 @@ use Moose;
 use Moose::Util::TypeConstraints;
 use YAML::XS;
 use File::Share 'dist_dir';
-my $dir = dist_dir('Data-Pokemon-Go');
+my $dir = $ENV{'USER'} eq 'yuki.yoshida'? 'share': dist_dir('Data-Pokemon-Go');
 
 use Data::Pokemon::Go::Relation;
 our @Types = @Data::Pokemon::Go::Role::Types::All;
