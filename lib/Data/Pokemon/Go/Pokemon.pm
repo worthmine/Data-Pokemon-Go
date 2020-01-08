@@ -179,7 +179,6 @@ sub _get_fullname {
     my $lang = shift;
     my $fullname = __PACKAGE__->get_Pokemon_name( $ref, $lang );
     $fullname .= "($ref->{'Form'})" if exists $ref->{'Form'};
-    $fullname .= "[$ref->{'ID'}]";
     return $fullname;
 }
 

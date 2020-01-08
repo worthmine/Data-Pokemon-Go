@@ -9,7 +9,7 @@ my $pg = Data::Pokemon::Go::Pokemon->new();
 my @list = ();
 my @regions_jp = qw( カントー ジョウト ホウエン シンオウ イッシュ アローラ ガラル);
 foreach my $region (@regions_jp){
-     push @list, [ $region, 1, 1, 1, '名詞', '固有名詞', '地名', '*', '*', '*', $region, $region, $region ];
+     push @list, [ $region, 1, 1, 1, '名詞', '固有名詞', '地域', '一般', '*', '*', $region, $region, $region ];
 }
 
 SKIP: {
@@ -18,7 +18,7 @@ SKIP: {
     foreach (@Data::Pokemon::Go::Pokemon::List){
         my $name = $pg->get_Pokemon_name( $All->{$_}, 'ja' );
         next if scalar @list and grep{ $_->[0] eq $name } @list;
-         push @list, [ $name, 1, 1, 1, '名詞', '固有名詞', 'ポケモン', '*', '*', '*', $name, $name, $name ];
+         push @list, [ $name, 1, 1, 1, '名詞', '固有名詞', '人名', '一般', '*', '*', $name, $name, $name ];
     }
 
     require Text::CSV_XS;

@@ -27,7 +27,7 @@ subtest 'Forms' => sub {                                            # 3
         my $name = $pg->get_Pokemon_name( $all->{$fullname}, 'ja' );
         my $form = $pg->hasForms();
         ok 1, "$form Form for $name is ok";
-        note $fullname . "は" . join( '／', @{$pg->types()} ) . "タイプ";
+        note $fullname . "\[${\$pg->id}\]は" . join( '／', @{$pg->types()} ) . "タイプ";
     }
 };
 
