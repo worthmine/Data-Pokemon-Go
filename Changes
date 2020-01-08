@@ -2,6 +2,9 @@ Revision history for Perl extension Data-Pokemon-Go
 
 {{$NEXT}}
 
+0.10 2020-01-08T05:30:49Z
+    - the pokemons in Unova region are now available
+
 0.09 2019-07-13T13:32:33Z
     - update the data around Hoenn region 
 
