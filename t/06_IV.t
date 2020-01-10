@@ -22,7 +22,7 @@ subtest 'Hoenn'     => sub{ IVs('Hoenn') };                             # 5
 subtest 'Sinnoh'    => sub{ IVs('Sinnoh') };                            # 6
 subtest 'Unova'     => sub{ IVs('Unova') };                             # 7
 subtest 'Alola'     => sub{ IVs('Alola') };                             # 8
-subtest 'galar'     => sub{ IVs('galar') };                             # 9
+subtest 'galar'     => sub{ IVs('Galar') };                             # 9
 
 done_testing();
 
